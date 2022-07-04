@@ -7,6 +7,6 @@ This are my notes from all things programming. From front end to back end, inclu
 
 |   Subject    | Link                                |
 | :----------: | ----------------------------------- |
-| Git & Github | [Git & Github](./git_github/git.md) |
+| Git & Github | [Git & Github](./git-github/git.md) |
 
 By **Diego Patricio Gutierrez**
