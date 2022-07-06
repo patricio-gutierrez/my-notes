@@ -8,5 +8,6 @@ This are my notes from all things programming. From front end to back end, inclu
 |   Subject    | Link                                |
 | :----------: | ----------------------------------- |
 | Git & Github | [Git & Github](./git-github/git.md) |
+|  Unix/Linux  | [Unix/Linux](./unix-linux/linux.md) |
 
 By **Diego Patricio Gutierrez**
