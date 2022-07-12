@@ -79,6 +79,11 @@
 | `mv <file> <path to file>`                            | Moves a file to specified path.                                                                            |
 | `head -<number> <file>`                               | Show only the top number of results.                                                                       |
 | `tail -<number> <file>`                               | Show only the bottom number of results.                                                                    |
+| `systemctl <service>`                                 | Control system services.                                                                                   |
+| `ps`                                                  | Display all the current processes in the linux system.                                                     |
+| `top`                                                 | Display system information.                                                                                |
+| `kill <option> <PID>`                                 | Terminate processes manually.                                                                              |
+| `crontab <option>`                                    | Schedule tasks.                                                                                            |
 
 ## Text Processor Commands
 
@@ -97,3 +102,32 @@
 | `gzip -d`                                        | Uncompress a file.                                                                       |
 | `truncate <file>`                                | Shrink or extend the size of a file to the specified file.                               |
 | `split <file>`                                   | Split to multiple files.                                                                 |
+| `sed <regex> <file>`                             | Powerful string manipulation command.                                                    |
+
+## User Account Commands
+
+| Command             | What it does                                   |
+| ------------------- | ---------------------------------------------- |
+| `useradd <name>`    | Creates a user with name.                      |
+| `id <name>`         | Shows id for that user.                        |
+| `groupadd <name>`   | Creates a group with name.                     |
+| `userdel -r <name>` | Deletes user with name.                        |
+| `groupdel <name>`   | Deletes a group with name.                     |
+| `usermod <name>`    | Modifies a user with name.                     |
+| `chgrp -R <name>`   | Changes a user group with name.                |
+| `chage`             | Sets an expiration date for the user password. |
+| `su - <user>`       | Change user or become root.                    |
+| `who`               | Shows how many people are logged in.           |
+| `last`              | All the details from users.                    |
+| `w`                 | Same as `who` but a little more info.          |
+| `finger`            | A lot of details from users.                   |
+| `users`             | Show which users are logged in.                |
+| `wall`              | Broadcast message to all logged users.         |
+| `write <user>`      | Write specific message to user.                |
+| `date`              | Display actual date.                           |
+| `uptime`            | How long has the system been up.               |
+| `hostname`          | Display actual hostname.                       |
+| `uname -a`          | Display all OS information.                    |
+| `which <command>`   | Display the location file of that command.     |
+| `cal`               | Display calendar.                              |
+| `bc`                | Basic calculator.                              |
