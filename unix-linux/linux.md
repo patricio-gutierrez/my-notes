@@ -12,12 +12,26 @@
 - Relative path: It identifies a location relative to your position.
 - Wild cards:
   - \* - represents zero or more characters.
-  - ? - represents a single character.
-  - [] - represents a range of characters.
+  - ? \- represents a single character.
+  - [] \- represents a range of characters.
 - Inode = Pointer or number of a file on the hard disk.
 - Soft Link = Link that will be removed if file is removed or renamed.
 - Hard Link = Deleting renaming or moving the original file will not affect the hard link.
 - Note about links: You cannot create soft or hard links within the same directory with the same name.
+- Commands typically have syntax:
+  - Command option(s) argument(s).
+- UNIX is a multi-user system. Every file and directory in your account can be protected from or made accesible to other users by changing its access permissions. Every user has responsability for controlling access to their files.
+- Permission for a file or directory may be restricted to by types.
+- There are 3 types of permission:
+  - r \- read
+  - w \- write
+  - x \- execute
+- Each permission (rxw) can be controlled at 3 levels:
+  - u \- user = yourself
+  - g \- group = can be people in the same project.
+  - o \- other = everyone in the system.
+- Access Control List (ACL) provides an additional, more flexible permission mechanism for file systems.
+- ACL allows you to give permissions for any user or group to any disc resource.
 
 ## Network Commands
 
@@ -27,17 +41,59 @@
 
 ## File System Navigation Commands
 
-| Command                             | What it does                           |
-| ----------------------------------- | -------------------------------------- |
-| `cd <directory>`                    | Change directory.                      |
-| `pwd`                               | Print working directory.               |
-| `ls`                                | List contents of current directory.    |
-| `touch`                             | Creates an empty file.                 |
-| `cp`                                | Copy file.                             |
-| `cp -R <directory>`                 | Copy directory recursively.            |
-| `mkdir`                             | Create directory.                      |
-| `find <directory> -name "<name>"`   | Find directory.                        |
-| `locate <directory> -name "<name>"` | Locate directory. Almost same as find. |
-| `passwd <user>`                     | Change password for specified user.    |
-| `ln <file>`                         | Creates hard link.                     |
-| `ln -s <file>`                      | Creates soft link.                     |
+| Command                                               | What it does                                                                                               |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `cd <directory>`                                      | Change directory.                                                                                          |
+| `pwd`                                                 | Print working directory.                                                                                   |
+| `ls`                                                  | List contents of current directory.                                                                        |
+| `touch`                                               | Creates an empty file.                                                                                     |
+| `cp`                                                  | Copy file.                                                                                                 |
+| `cp -R <directory>`                                   | Copy directory recursively.                                                                                |
+| `mkdir`                                               | Create directory.                                                                                          |
+| `find <directory> -name "<name>"`                     | Find directory.                                                                                            |
+| `locate <directory> -name "<name>"`                   | Locate directory. Almost same as find.                                                                     |
+| `passwd <user>`                                       | Change password for specified user.                                                                        |
+| `ln <file>`                                           | Creates hard link.                                                                                         |
+| `ln -s <file>`                                        | Creates soft link.                                                                                         |
+| `man <command>`                                       | Shows the manual for a specific command.                                                                   |
+| `ls -l`                                               | File or directory permission.                                                                              |
+| `chmod <permission> <file>`                           | Command to change permission.                                                                              |
+| `chown <permission> <file>`                           | Changes the ownership of a file (`-R` flag for recursive).                                                 |
+| `chgrp <permission> <file>`                           | Changes the group onwership of a file (`-R` flag for recursive).                                           |
+| `setfacl -m <user/group>:<user>:<permissions> <file>` | Gives special permission to a file for a user group.                                                       |
+| `setfacl -rm "entry" <file>`                          | Allow files/directories to inherit ACL.                                                                    |
+| `setfacl -x <user/group>:<user> <file>`               | Removes special permission to a file for a user.                                                           |
+| `setfacl -b <file>`                                   | Removes special permission to everyone.                                                                    |
+| `whatis <command>`                                    | Tells you what the command does.                                                                           |
+| `echo "<message>"`                                    | Echoes back that message.                                                                                  |
+| `echo "<message>" > <file>`                           | Echoes back that message to a file.                                                                        |
+| `echo "<message>" >> <file>`                          | Appends that message to a file.                                                                            |
+| `cat <file>`                                          | Reads the content of a file.                                                                               |
+| `tee <file>`                                          | Store and view (both at the same time) the output of any command.                                          |
+| `tee -a <file>`                                       | Append and view (both at the same time) the output of any command.                                         |
+| `wc -c <file>`                                        | Counts how many words are in a file.                                                                       |
+| `<command> \| <commnand>`                             | A pipe is used by the shell to connect the output of one command directly to the input of another command. |
+| `<command> \| <commnand>`                             | A pipe is used by the shell to connect the output of one command directly to the input of another command. |
+| `rm <file>`                                           | Removes a file.                                                                                            |
+| `rm -r <file>`                                        | Removes a directory.                                                                                       |
+| `mv <file> <path to file>`                            | Moves a file to specified path.                                                                            |
+| `head -<number> <file>`                               | Show only the top number of results.                                                                       |
+| `tail -<number> <file>`                               | Show only the bottom number of results.                                                                    |
+
+## Text Processor Commands
+
+| Command                                          | What it does                                                                             |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| `cut -c<number> <file>`                          | Allows you to cut parts of lines from specified file or piped data and print the result. |
+| `cut -d<delimiter> -f <delimiter number> <file>` | Allows you to cut parts of lines from specified file or piped data and print the result. |
+| `awk <arguments> <file>`                         | Exctract fields from a file or from an output.                                           |
+| `grep <arguments> <file>`                        | Processes text line by line and prints any lines which match a specified pattern.        |
+| `sort <file>`                                    | Sorts in alphabetical order.                                                             |
+| `uniq`                                           | Filters out the repeated or duplicate lines.                                             |
+| `diff`                                           | Compare two files line by line.                                                          |
+| `cpm`                                            | Compare two files byte by byte.                                                          |
+| `tar`                                            | Compress a file.                                                                         |
+| `gzip`                                           | Compress a file.                                                                         |
+| `gzip -d`                                        | Uncompress a file.                                                                       |
+| `truncate <file>`                                | Shrink or extend the size of a file to the specified file.                               |
+| `split <file>`                                   | Split to multiple files.                                                                 |
