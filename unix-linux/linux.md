@@ -32,6 +32,7 @@
   - o \- other = everyone in the system.
 - Access Control List (ACL) provides an additional, more flexible permission mechanism for file systems.
 - ACL allows you to give permissions for any user or group to any disc resource.
+- **Evniroment Variables** are a set of defined rules and values to build an environment.
 
 ## Network Commands
 
@@ -84,6 +85,18 @@
 | `top`                                                 | Display system information.                                                                                |
 | `kill <option> <PID>`                                 | Terminate processes manually.                                                                              |
 | `crontab <option>`                                    | Schedule tasks.                                                                                            |
+| `set <option>`                                        | Schedule tasks only once.                                                                                  |
+| `df -h`                                               | Disk partition information and usage.                                                                      |
+| `dmesg`                                               | Outputs system warnings or failures.                                                                       |
+| `iostat`                                              | Input and output statistics.                                                                               |
+| `netstat`                                             | Information about the computer.                                                                            |
+| `free`                                                | Information about the memory.                                                                              |
+| `cat /proc/cpuinfo`                                   | Information about the cpu.                                                                                 |
+| `cat /proc/meminfo`                                   | Information about the memory.                                                                              |
+| `ll /var/log`                                         | See all the logs.                                                                                          |
+| `hostnamectl set-hostname <name>`                     | Changes the hostname of a machine.                                                                         |
+| `script <filename>`                                   | Records every command in the specified file.                                                               |
+| `printenv`                                            | Prints environment variables.                                                                              |
 
 ## Text Processor Commands
 
@@ -131,3 +144,23 @@
 | `which <command>`   | Display the location file of that command.     |
 | `cal`               | Display calendar.                              |
 | `bc`                | Basic calculator.                              |
+
+## Process Managment Commands
+
+| Command                      | What it does                                |
+| ---------------------------- | ------------------------------------------- |
+| `Ctrl + z`                   | Put a process in the background.            |
+| `sleep <number>`             | Sleep process for amount of time.           |
+| `bg <command>`               | Run process on the background.              |
+| `jobs`                       | Display processes on the background.        |
+| `fg`                         | Bring process to the front.                 |
+| `nohup`                      | Run the process even if terminal is closed. |
+| `nice -n <number> <command>` | Give priority to a task.                    |
+
+## System Maintenance Commands
+
+| Command    | What it does                   |
+| ---------- | ------------------------------ |
+| `shutdown` | Shuts down the system.         |
+| `reboot`   | Reboots the system.            |
+| `halt`     | Forcely shuts down the system. |
