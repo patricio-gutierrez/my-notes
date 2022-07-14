@@ -116,6 +116,8 @@
 | `truncate <file>`                                | Shrink or extend the size of a file to the specified file.                               |
 | `split <file>`                                   | Split to multiple files.                                                                 |
 | `sed <regex> <file>`                             | Powerful string manipulation command.                                                    |
+| `history`                                        | Display past shell commands.                                                             |
+| `cat /home/users-dir-name/.bash_history`         | Display past shell commands by that user.                                                |
 
 ## User Account Commands
 
@@ -164,3 +166,50 @@
 | `shutdown` | Shuts down the system.         |
 | `reboot`   | Reboots the system.            |
 | `halt`     | Forcely shuts down the system. |
+
+## Shell Programing
+
+- What is shell?
+  - Interface between users and Kernel/OS.
+  - CLI is a shell.
+- What is a shell script?
+  - A shell script is an executable file containing multiple shell commands that are executed sequentially.
+  - Shell (`#!/bin/bash`)
+  - Comments (`#`)
+  - Commands
+  - Statements
+- Input/Output
+  - read
+  - echo
+- If then
+
+  ```bash
+  if [statement]
+    then
+      # code
+    else
+      #code
+  fi
+  ```
+
+- For loops
+
+  ```bash
+  for i in range
+    do
+      #code
+  done
+  ```
+
+- Do while
+
+  ```bash
+  while [condition]
+  do
+    #code
+  done
+  ```
+
+- Alias
+  - `alias <name> = "<command>"`
+  - `unalias <name>`
