@@ -33,12 +33,18 @@
 - Access Control List (ACL) provides an additional, more flexible permission mechanism for file systems.
 - ACL allows you to give permissions for any user or group to any disc resource.
 - **Evniroment Variables** are a set of defined rules and values to build an environment.
+- NIC = Network interface card.
 
 ## Network Commands
 
-| Command | What it does                           |
-| ------- | -------------------------------------- |
-| `ip a`  | List all available ip's or interfaces. |
+| Command             | What it does                           |
+| ------------------- | -------------------------------------- |
+| `ip a`              | List all available ip's or interfaces. |
+| `ping <server>`     | Ping to a specific ip or server.       |
+| `ping <server>`     | Ping to a specific ip or server.       |
+| `netstat -rnv`      | Shows info about your network.         |
+| `tcpdump -i <port>` | Shows incoming and outgoing traffic.   |
+| `ethtool <port>`    | Shows information about your NIC.      |
 
 ## File System Navigation Commands
 
