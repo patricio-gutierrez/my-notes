@@ -12,5 +12,6 @@ This are my notes from all things programming. From front end to back end, inclu
 |      Unix/Linux       |               [Unix/Linux](./unix-linux/linux.md)                |
 |         HTML          |                 [HTML](./front-end/html/html.md)                 |
 |          CSS          |                  [CSS](./front-end/css/css.md)                   |
+|      Javascript       |                [JS](./front-end/js/javascript.md)                |
 
 By **Diego Patricio Gutierrez**
