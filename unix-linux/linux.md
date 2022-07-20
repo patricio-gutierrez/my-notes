@@ -34,6 +34,9 @@
 - ACL allows you to give permissions for any user or group to any disc resource.
 - **Evniroment Variables** are a set of defined rules and values to build an environment.
 - NIC = Network interface card.
+- Network Manager = Service that provides set of tools designed specifically to make it easier to manage networks.
+- FTP = File Transfer Protocol is a standard newtwork protocol used for the transfer of files between client and server. Default port 21.
+- SCP = Secure Transfer Protocol. Port 22.
 
 ## Network Commands
 
@@ -45,6 +48,7 @@
 | `netstat -rnv`      | Shows info about your network.         |
 | `tcpdump -i <port>` | Shows incoming and outgoing traffic.   |
 | `ethtool <port>`    | Shows information about your NIC.      |
+| `nmtui`             | Network Manager tool.                  |
 
 ## File System Navigation Commands
 
@@ -103,6 +107,10 @@
 | `hostnamectl set-hostname <name>`                     | Changes the hostname of a machine.                                                                         |
 | `script <filename>`                                   | Records every command in the specified file.                                                               |
 | `printenv`                                            | Prints environment variables.                                                                              |
+| `wget <url>`                                          | Download something from the web.                                                                           |
+| `curl <url>`                                          | Show the specified url content (web).                                                                      |
+| `ftp <ip>`                                            | Connect to server for file transfer.                                                                       |
+| `scp <file> <ip>:<folder>`                            | Connect to server for secure file transfer.                                                                |
 
 ## Text Processor Commands
 
