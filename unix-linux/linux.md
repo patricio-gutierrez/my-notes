@@ -38,6 +38,8 @@
 - FTP = File Transfer Protocol is a standard newtwork protocol used for the transfer of files between client and server. Default port 21.
 - SCP = Secure Transfer Protocol. Port 22.
 - rsync = Utility for efficiently transferring and synchronizing files within the same computer or to a remote computer by comparing the modification time and size of files.
+- DNS = Domain Name System.
+- NTP = Network Time Protocol.
 
 ## Network Commands
 
@@ -113,6 +115,8 @@
 | `ftp <ip>`                                            | Connect to server for file transfer.                                                                       |
 | `scp <file> <ip>:<folder>`                            | Connect to server for secure file transfer.                                                                |
 | `rsync -azvh <options> <source> <destination>`        | Sync files between computers.                                                                              |
+| `nslookup`                                            | Information about a server.                                                                                |
+| `ntpq`                                                | Sync local time with server.                                                                               |
 
 ## Text Processor Commands
 
