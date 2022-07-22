@@ -119,6 +119,13 @@
 ## If - Else
 
 - `if` statements are used to make decisions in code. The keyword `if` tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as `Boolean` conditions and they may only be `true` or `false`.
+
+  ```js
+  if (condition is true) {
+    //statement is executed
+  }
+  ```
+
 - When the condition evaluates to `true`, the program executes the statement inside the curly braces. When the Boolean condition evaluates to `false`, the statement inside the curly braces will not execute.
 - The most basic operator is the equality operator `==`. The equality operator compares two values and returns `true` if they're equivalent or `false` if they are not.
 - Strict equality (`===`), if the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
@@ -204,11 +211,4 @@
 ## Data Structures
 
 - In Computer Science a **queu** is an abstract _Data Structure_ where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
-
-  ```js
-  if (condition is true) {
-    //statement is executed
-  }
-  ```
-
 - Recursion is the concept that a function can be expressed in terms of itself.
