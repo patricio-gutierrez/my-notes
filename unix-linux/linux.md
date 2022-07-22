@@ -40,6 +40,11 @@
 - rsync = Utility for efficiently transferring and synchronizing files within the same computer or to a remote computer by comparing the modification time and size of files.
 - DNS = Domain Name System.
 - NTP = Network Time Protocol.
+- Chronyd = Time Sync Protocol better than NTP.
+- Timedatectl = Time Sync Protocol better than Chronyd (**Actual One**).
+- Sendmail = send and receive mail through your server.
+- httpd = Web Server.
+- rsyslog = Generate logs or collect logs from other servers.
 
 ## Network Commands
 
@@ -117,6 +122,9 @@
 | `rsync -azvh <options> <source> <destination>`        | Sync files between computers.                                                                              |
 | `nslookup`                                            | Information about a server.                                                                                |
 | `ntpq`                                                | Sync local time with server.                                                                               |
+| `cronyd`                                              | Sync local time with server.                                                                               |
+| `timedatectl`                                         | Sync local time with server.                                                                               |
+| `mail -s <subject line> <email>`                      | Send a mail.                                                                                               |
 
 ## Text Processor Commands
 
