@@ -71,6 +71,7 @@
 - Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use zero-based indexing, so the first element in an array has an index of `0`.
 - Unlike strings, the entries of arrays are _mutable_ and can be changed freely, even if the array was declared with `const`.
 - One way to think of a _multi-dimensional array_, is as an _array of arrays_. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+- ES6 introduces the _spread operator_ (`...`), which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
 
 | Method        | Description                                                                                                     |
 | ------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -111,6 +112,35 @@
 - Variables which are declared within a function, as well as the function parameters, have _local_ scope. That means they are only visible within that function.
 - It is possible to have both _local_ and _global_ variables with the same name. When you do this, the local variable takes precedence over the global variable.
 - A function can include the `return` statement but it does not have to. In the case that the function doesn't have a `return` statement, when you call it, the function processes the inner code but the returned value is `undefined`.
+- _Lexical scoper_ refers that inner functions within a function can access the variables declared.
+- _Function Expressions_ is another way to declare functions:
+
+  ```js
+  const func = function () {
+    // Code
+  };
+  ```
+
+- _High Order Functions_ are functions that operate on/with other functions.
+- _Callback Functions_ a callback function is a function passed into another function as an argument, which is invoked inside the outer function.
+- _Hoisting_ takes functions to the top when compiled and you can declare them anywhere.
+- ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use **arrow function syntax**:
+
+  ```js
+  const myFunc = () => {
+    const myVar = 'value';
+    return myVar;
+  };
+  ```
+
+- In order to help us create more flexible functions, ES6 introduces _default parameters_ for functions.
+- In order to help us create more flexible functions, ES6 introduces the _rest parameter_ for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+
+  ```js
+  function howMany(...args) {
+    return 'You have passed ' + args.length + ' arguments.';
+  }
+  ```
 
 ## Booleans
 
@@ -193,6 +223,57 @@
 - Objects can be thought of as a **key/value storage**, like a dictionary. If you have tabular data, you can use an object to lookup values.
 - Sometimes it is useful to check if the property of a given object exists or not. We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name.
 - When comparing objects you compare the reference and not the object properties, so they are never equal.
+- `const` declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.
+- _Destructuring assignment_ is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+- Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+- ES6 adds some nice support for easily defining _object literals_.
+
+  ```js
+  const getMousePosition = (x, y) => ({ x, y });
+  ```
+
+- With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax.
+
+  ```js
+  const person = {
+    name: 'Taylor',
+    sayHello() {
+      return `Hello! My name is ${this.name}.`;
+    },
+  };
+  ```
+
+- ES6 provides a new syntax to create objects, using the class keyword.
+
+  ```js
+  class SpaceShuttle {
+    constructor(targetPlanet) {
+      this.targetPlanet = targetPlanet;
+    }
+  }
+  const zeus = new SpaceShuttle('Jupiter');
+  ```
+
+- It should be noted that the `class` keyword declares a new function, to which a constructor is added. This constructor is invoked when `new` is called to create a new object.
+- The `constructor` method is a special method for creating and initializing an object created with a class.
+- **Getter** functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+- **Setter** functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+
+  ```js
+  class Book {
+    constructor(author) {
+      this._author = author;
+    }
+    // getter
+    get writer() {
+      return this._author;
+    }
+    // setter
+    set writer(updatedAuthor) {
+      this._author = updatedAuthor;
+    }
+  }
+  ```
 
 ## For - Each - While - Do While
 
@@ -202,11 +283,94 @@
 - `for (a; b; c)`, where a is the initialization statement, b is the condition statement, and c is the final expression.
 - The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to `true`. When the condition is `false` at the start of the iteration, the loop will stop executing. This means if the condition starts as false, your loop will never execute.
 - `do...while` loop will first do one pass of the code inside the loop no matter what, and then continue to run the loop `while` the specified condition evaluates to `true`.
+- You can break out of a loop by using the keyword `break`;
+- `For...of` for looping through _arrays_ in a more easy way.
+- `For...in` for looping through _objects_ in a more easy way.
 
 ## Ternary Operator
 
 - The _conditional operator_, also called the _ternary operator_, can be used as a one line if-else expression.
 - The syntax is `a ? b : c`, where `a` is the condition, `b` is the code to run when the condition returns `true`, and `c` is the code to run when the condition returns `false`.
+
+## Modules
+
+- In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a `type` of `module`.
+
+```js
+<script type="module" src="filename.js"></script>
+```
+
+- A script that uses this `module` type can now use the `import` and `export` features you will learn about in the upcoming challenges.
+- In order to share it with these other files, you first need to `export` it.
+
+  ```js
+  export const add = (x, y) => {
+    return x + y;
+  };
+  ```
+
+  ```js
+  const add = (x, y) => {
+    return x + y;
+  };
+
+  export { add };
+  ```
+
+- `import` allows you to choose which parts of a file or module to load.
+
+  ```js
+  import { add } from './math_functions.js';
+  ```
+
+  ```js
+  import { add, subtract } from './math_functions.js';
+  ```
+
+- Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the `import * as` syntax.
+
+  ```js
+  import * as myMathModule from './math_functions.js';
+  ```
+
+- There is another `export` syntax you need to know, known as _export default_. Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+- To import a default export, you need to use a different `import` syntax.
+
+  ```js
+  import add from './math_functions.js';
+  ```
+
+## Promises
+
+- A **promise** in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. `Promise` is a constructor function, so you need to use the `new` keyword to create one. It takes a function, as its argument, with two parameters - `resolve` and `reject`. These are methods used to determine the outcome of the promise.
+
+```js
+const myPromise = new Promise((resolve, reject) => {});
+```
+
+- A promise has three states: `pending`, `fulfilled`, and `rejected`.
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+```
+
+- The `then` method is executed immediately after your promise is fulfilled with `resolve`.
+
+```js
+myPromise.then((result) => {});
+```
+
+- `catch` is the method used when your promise has been rejected.
+
+  ```js
+  myPromise.catch((error) => {});
+  ```
 
 ## Data Structures
 
