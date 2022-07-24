@@ -372,6 +372,57 @@ myPromise.then((result) => {});
   myPromise.catch((error) => {});
   ```
 
+## Regex
+
+- Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
+- JavaScript has multiple ways to use regexes. One way to test a regex is using the `.test()` method. The `.test()` method takes the **regex**, applies it to a string (which is placed inside the parentheses), and returns `true` or `false` if your pattern finds something or not.
+
+  ```js
+  let testStr = 'freeCodeCamp';
+  let testRegex = /Code/;
+  testRegex.test(testStr);
+  ```
+
+- This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the `alternation` or `OR` operator: `|`.
+- This operator matches patterns either before or after it. For example, if you wanted to match the strings yes or no, the regex you want is `/yes|no/`.
+- The flag that ignores case - the `i` flag.
+- You can also extract the actual matches you found with the `.match()` method.
+- To search or extract a pattern more than once, you can use the global search flag: `g`.
+- The wildcard character `.` will match any one character.
+- You can search for a literal pattern with some flexibility with _character classes_. Character classes allow you to define a group of characters you wish to match by placing them inside square (`[` and `]`) brackets.
+- Inside a character set, you can define a range of characters to match using a hyphen character: `-`.
+- To create a _negated character set_, you place a caret character (`^`) after the opening bracket and before the characters you do not want to match.
+- Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated. You can use the `+` character to check if that is the case.
+- There's also an option that matches characters that occur zero or more times. The character to do this is the asterisk or star: `*`.
+- In regular expressions, a _greedy_ match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a _lazy_ match, which finds the smallest possible part of the string that satisfies the regex pattern.
+- You can use the `?` character to change it to lazy matching.
+- Outside of a character set, the caret (`^`) is used to search for patterns at the beginning of strings.
+- You can search the end of strings using the dollar sign character `$` at the end of the regex.
+- The closest character class in JavaScript to match the alphabet is `\w`. This shortcut is equal to `[A-Za-z0-9_]`. This character class matches upper and lowercase letters plus numbers.
+- You can search for the opposite of the `\w` with `\W`. Note, the opposite pattern uses a capital letter. This shortcut is the same as `[^A-Za-z0-9_]`.
+- The shortcut to look for digit characters is `\d`, with a lowercase d. This is equal to the character class `[0-9]`, which looks for a single character of any number between zero and nine.
+- The shortcut to look for non-digit characters is `\D`. This is equal to the character class `[^0-9]`, which looks for a single character that is not a number between zero and nine.
+- You can search for whitespace using `\s`, which is a lowercase `s`. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters.
+- Search for non-whitespace using `\S`, which is an uppercase `s`. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters.
+- You can specify the lower and upper number of patterns with _quantity specifiers_. Quantity specifiers are used with curly brackets (`{` and `}`). You put two numbers between the curly brackets - for the lower and upper number of patterns.
+- To only specify the lower number of patterns, keep the first number followed by a comma.
+- To specify a certain number of patterns, just have that one number between the curly brackets.
+- You can specify the possible existence of an element with a question mark, `?`. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
+- _Lookaheads_ are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+- There are two kinds of lookaheads: _positive lookahead_ and _negative lookahead_.
+- A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. A positive lookahead is used as `(?=...)` where the `...` is the required part that is not matched.
+- On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there. A negative lookahead is used as `(?!...)` where the `...` is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+- Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses `()`.
+- Capture groups are constructed by enclosing the regex pattern to be captured in parentheses. In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be `\w+` enclosed by parentheses: `/(\w+)/`.
+- You can search and replace text in a string using `.replace()` on a string. The inputs for `.replace()` is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+- You can also access capture groups in the replacement string with dollar signs (`$`).
+
+## Debug
+
+- The `console.log()` method, which "prints" the output of what's within its parentheses to the console, will likely be the most helpful debugging tool. Placing it at strategic points in your code can show you the intermediate values of variables.
+- You can use `typeof` to check the data structure, or type, of a variable.
+- _Off by one errors_ (sometimes called OBOE) crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them. JavaScript indexing starts at zero, not one, which means the last index is always one less than the length of the item. If you try to access an index equal to the length, the program may throw an "index out of range" reference error or print `undefined`.
+
 ## Data Structures
 
 - In Computer Science a **queu** is an abstract _Data Structure_ where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
