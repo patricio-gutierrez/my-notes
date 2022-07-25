@@ -87,6 +87,8 @@
 | `.slice()`    | Copy a portion of an array.                                                                                     |
 | `.splice()`   | Remove/replace elements of an array.                                                                            |
 | `.sort()`     | Sort elements of an array.                                                                                      |
+| `.forEach()`  | Accepts a callback function. Calls the function once per element in the array.                                  |
+| `.map()`      | Creates a new array with the results of calling a callback on every element in the array.                       |
 
 ## Functions
 
@@ -222,6 +224,7 @@
 - We can also delete properties from objects using the keyword `delete`.
 - Objects can be thought of as a **key/value storage**, like a dictionary. If you have tabular data, you can use an object to lookup values.
 - Sometimes it is useful to check if the property of a given object exists or not. We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name.
+- Another way to look for an specific key in a an object is by using the keryword `in`.
 - When comparing objects you compare the reference and not the object properties, so they are never equal.
 - `const` declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.
 - _Destructuring assignment_ is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
