@@ -89,6 +89,11 @@
 | `.sort()`     | Sort elements of an array.                                                                                      |
 | `.forEach()`  | Accepts a callback function. Calls the function once per element in the array.                                  |
 | `.map()`      | Creates a new array with the results of calling a callback on every element in the array.                       |
+| `.find()`     | Returns the value of the first element in the array that satisfies the provided testing function.               |
+| `.filter()`   | Creates a new array with all elements that pass the test implemented by the provided function.                  |
+| `.every()`    | Tests wether all elements in the array pass the provided function. It returns a Boolean value.                  |
+| `.some()`     | Similar to every, but returns true if any of the array elements pass the test function.                         |
+| `.reduce()`   | Executes a reducer function on each element of the array, resulting in a single value.                          |
 
 ## Functions
 
@@ -139,7 +144,7 @@
 - In order to help us create more flexible functions, ES6 introduces the _rest parameter_ for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
 
   ```js
-  function howMany(...args) {
+  function howMany(...args = 1) {
     return 'You have passed ' + args.length + ' arguments.';
   }
   ```
@@ -277,6 +282,8 @@
     }
   }
   ```
+
+  -
 
 ## For - Each - While - Do While
 
