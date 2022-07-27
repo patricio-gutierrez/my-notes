@@ -45,6 +45,16 @@
 - Sendmail = send and receive mail through your server.
 - httpd = Web Server.
 - rsyslog = Generate logs or collect logs from other servers.
+- OS Hardening
+  - User Account
+  - Remove un-wanted packages
+  - Stop un-used services
+  - Check on listening ports
+  - Secure SSH configuration
+  - Enable Firewall
+  - Enable SELinux
+  - Change Listening Port Numbers
+  - Keep OS up to date.
 
 ## Network Commands
 

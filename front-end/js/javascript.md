@@ -283,7 +283,7 @@
   }
   ```
 
-  -
+  - The keyword _this_ can be a major poiny of confusion.
 
 ## For - Each - While - Do While
 
