@@ -55,6 +55,7 @@
   - Enable SELinux
   - Change Listening Port Numbers
   - Keep OS up to date.
+- OpenLDAP = Active Directory for Linux.
 
 ## Network Commands
 
@@ -135,6 +136,7 @@
 | `cronyd`                                              | Sync local time with server.                                                                               |
 | `timedatectl`                                         | Sync local time with server.                                                                               |
 | `mail -s <subject line> <email>`                      | Send a mail.                                                                                               |
+| `slapd`                                               | OpenLDAP service.                                                                                          |
 
 ## Text Processor Commands
 
