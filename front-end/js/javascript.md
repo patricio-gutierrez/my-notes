@@ -283,7 +283,26 @@
   }
   ```
 
-  - The keyword _this_ can be a major poiny of confusion.
+  - _this_ refers to the object that the method is associated with.
+  - `instanceof` allows you to compare an object to a constructor, returning `true` or `false` based on whether or not that object was created with the constructor.
+  - Properties in the _prototype_ are shared among ALL instances of the objects. Think of a _prototype_ as a "recipe" for creating objects.
+  - All objects in JavaScript (with a few exceptions) have a _prototype_.
+  - `Object` is a _supertype_ for all objects in JavaScript. Therefore, any object can use the `hasOwnProperty` method.
+  - `Object.create(obj)` creates a new object, and sets `obj` as the new object's prototype.
+  - Inheritance refers to adding the parent properties and methods to the child.
+  - For unrelated objects, it's better to use _mixins_. A _mixin_ allows other objects to use a collection of functions.
+  - The simplest way to make this public property private is by creating a variable within the constructor function. This changes the scope of that variable to be within the constructor function versus available globally. This way, the variable can only be accessed and changed by methods also within the constructor function.
+  - In JavaScript, a function always has access to the context in which it was created. This is called `closure`.
+  - A common pattern in JavaScript is to execute a function as soon as it is declared:
+
+    ```js
+    (function () {
+      console.log('message');
+    })();
+    ```
+
+- Note that the function has no name and is not stored in a variable. The two parentheses () at the end of the function expression cause it to be immediately executed or invoked. This pattern is known as an _immediately invoked function expression_ or _IIFE_.
+- An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or _module_.
 
 ## For - Each - While - Do While
 
