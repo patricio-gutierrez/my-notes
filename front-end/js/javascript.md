@@ -456,3 +456,4 @@ myPromise.then((result) => {});
 
 - In Computer Science a **queu** is an abstract _Data Structure_ where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 - Recursion is the concept that a function can be expressed in terms of itself.
+- I'll be back.
