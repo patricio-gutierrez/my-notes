@@ -446,6 +446,29 @@ myPromise.then((result) => {});
 - You can search and replace text in a string using `.replace()` on a string. The inputs for `.replace()` is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
 - You can also access capture groups in the replacement string with dollar signs (`$`).
 
+## Functional Programming
+
+- Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope: `INPUT -> PROCESS -> OUTPUT`.
+- Functional programming is about:
+  1. Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change.
+  2. Pure functions - the same input always gives the same output.
+  3. Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled.
+- Functions that can be assigned to a variable, passed into another function, or returned from another function just like any other normal value, are called _first class_ functions. In JavaScript, all functions are first class functions.
+- The functions that take a function as an argument, or return a function as a return value are called _higher order_ functions.
+- When functions are passed in to or returned from another function, then those functions which were passed in or returned can be called a _lambda_.
+- Functional programming is a good habit. It keeps your code easy to manage, and saves you from sneaky bugs.
+- Functional programming is a form of declarative programming. You tell the computer what you want done by calling a method or function.
+- One of the core principles of functional programming is to not change things. Changes lead to bugs. It's easier to prevent bugs knowing that your functions don't change anything, including the function arguments or any global variable.
+- Recall that in functional programming, changing or altering things is called _mutation_, and the outcome is called a _side effect_. A function, ideally, should be a _pure_ function, meaning that it does not cause any side effects.
+- Another principle of functional programming is to always declare your dependencies explicitly. This means if a function depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+- There are several good consequences from this principle. The function is easier to test, you know exactly what input it takes, and it won't depend on anything else in your program.
+- This can give you more confidence when you alter, remove, or add new code. You would know what you can or cannot change and you can see where the potential traps are.
+- Finally, the function would always produce the same output for the same set of inputs, no matter what part of the code executes it.
+- It would make sense to be able to pass them as arguments to other functions, and return a function from another function. Functions are considered _first class objects_ in JavaScript, which means they can be used like any other object. They can be saved in variables, stored in an object, or passed as function arguments.
+- Functional programming is all about creating and using non-mutating functions.
+- The _arity_ of a function is the number of arguments it requires. _Currying_ a function means to convert a function of N arity into N functions of arity 1.
+- Similarly, _partial application_ can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments.
+
 ## Debug
 
 - The `console.log()` method, which "prints" the output of what's within its parentheses to the console, will likely be the most helpful debugging tool. Placing it at strategic points in your code can show you the intermediate values of variables.
@@ -456,4 +479,12 @@ myPromise.then((result) => {});
 
 - In Computer Science a **queu** is an abstract _Data Structure_ where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 - Recursion is the concept that a function can be expressed in terms of itself.
-- I'll be back.
+
+## DOM
+
+- The Document Object Model (DOM) is a representation of a webpage.
+- The _document_ is the entry point to all the DOM.
+- `document.getElementById()` gets the element by the id given in the html attributes.
+- `document.getElementsByTagName()` gets all elements with the given tag, you can manipulate this elements by using some array methods.
+- `document.getElementByClassName()` or `document.getElementsByClassName()` gets all elements with the given class, you can manipulate this elements by using some array methods.
+- `document.querySelector()` or `document.querySelectorAll()` gets all elements with the given CSS selector, you can manipulate this elements by using some array methods.
