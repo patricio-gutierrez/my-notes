@@ -488,3 +488,22 @@ myPromise.then((result) => {});
 - `document.getElementsByTagName()` gets all elements with the given tag, you can manipulate this elements by using some array methods.
 - `document.getElementByClassName()` or `document.getElementsByClassName()` gets all elements with the given class, you can manipulate this elements by using some array methods.
 - `document.querySelector()` or `document.querySelectorAll()` gets all elements with the given CSS selector, you can manipulate this elements by using some array methods.
+- `.innerText` displays the text inside an element and let you change its contents.
+- `.textContent` displays the text inside an element keeping the original format and let you change its contents.
+- `.innerHTML` displays the HTML content of the selected element.
+- `.value` or `.checked` checks the value assigned to an input.
+- `.getAttribute` gets the specified attribute value.
+- `.setAttribute` sets the specified attribute to the new specified values.
+- `.parentElement` gets the parent element of the selected element.
+- `.children` gets the children element of the selected element.
+- `nextElementSibling` gets the next element of the selected element.
+- `previousElementSibling` gets the previous element of the selected element.
+- `.style.<property>` changes the CSS style for the selected element.
+- `getComputedStyle` gets all the CSS computed styles for the selected element.
+- `.classList` lets you manipulate classes like adding or removing to the selected element.
+- `.createElement` creates the specified HTML element.
+- `.appendChild` appends to the DOM the created element.
+- `.insertBefore` appends element at the beggining of the specified element.
+- `.insertAdjacentElement` appends element to the specified position of the specified element.
+- `.append` appends to the end of the selected element.
+- `.prepend` appends to the beggining of the selected element.
