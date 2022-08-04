@@ -507,3 +507,5 @@ myPromise.then((result) => {});
 - `.insertAdjacentElement` appends element to the specified position of the specified element.
 - `.append` appends to the end of the selected element.
 - `.prepend` appends to the beggining of the selected element.
+- `.remove` removes the selected element.
+- `.addEventListener` adds an event listener to an action for the element.
