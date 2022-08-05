@@ -40,6 +40,8 @@
 - `typof` gives you the type of a value.
 - `parseInt()` & `parseFloat()` parse strings into numbers.
 - In order to get the last letter of a string, you can subtract one from the string's length.
+- The _Call Stack_ is the mechanism the JS interpreter uses to keep track of its place in a script that calls mutiple functions.
+- JS is _single threaded_.
 
 ## String Methods
 
@@ -508,4 +510,14 @@ myPromise.then((result) => {});
 - `.append` appends to the end of the selected element.
 - `.prepend` appends to the beggining of the selected element.
 - `.remove` removes the selected element.
-- `.addEventListener` adds an event listener to an action for the element.
+- `.addEventListener` adds an event listener to an action for the element. It also recieves an event that can be accessed in the function, this event can be used to check for different events.
+- `event.preventDefault()` prevents the default behaivor when sending a form through JS.
+- When using a form it's better to recieve the inputs by name using the _input_ event listener and asign them to a object.
+
+## Promises
+
+- A _promise_ is an object representing the eventual completion or failure of an asynchronous operation.
+- `new Promise((resolve, reject) => {});` where `resolve` is when the promise is successful and `reject` when the promise failed.
+- `.then()` runs when the promise is resolved successfully.
+- `.catch()` runs when the promise is rejected.
+- You can chain the `.then()` for multiple requests.
