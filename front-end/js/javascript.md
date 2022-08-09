@@ -403,6 +403,12 @@ myPromise.then((result) => {});
   myPromise.catch((error) => {});
   ```
 
+- A _promise_ is an object representing the eventual completion or failure of an asynchronous operation.
+- `new Promise((resolve, reject) => {});` where `resolve` is when the promise is successful and `reject` when the promise failed.
+- `.then()` runs when the promise is resolved successfully.
+- `.catch()` runs when the promise is rejected.
+- You can chain the `.then()` for multiple requests.
+
 ## Regex
 
 - Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
@@ -514,10 +520,18 @@ myPromise.then((result) => {});
 - `event.preventDefault()` prevents the default behaivor when sending a form through JS.
 - When using a form it's better to recieve the inputs by name using the _input_ event listener and asign them to a object.
 
-## Promises
+## HTTP Requests
 
-- A _promise_ is an object representing the eventual completion or failure of an asynchronous operation.
-- `new Promise((resolve, reject) => {});` where `resolve` is when the promise is successful and `reject` when the promise failed.
-- `.then()` runs when the promise is resolved successfully.
-- `.catch()` runs when the promise is rejected.
-- You can chain the `.then()` for multiple requests.
+- _AJAX_ = Asynchronous Javascript and XML.
+- _JSON_ = Javascript Object Notation.
+- _Fetch API_ = Newer way of making requests via JS using promises.
+
+  ```js
+  fetch('url').then((response) => {
+    console.log(response.json());
+  });
+  ```
+
+- To throw an error you can use `throw new Error()`.
+- You can chain multiple requests using _promises_.
+- _Axios_ = A library for making HTTP request (more easy than fetch API).
