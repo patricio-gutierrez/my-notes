@@ -291,7 +291,8 @@
   - All objects in JavaScript (with a few exceptions) have a _prototype_.
   - `Object` is a _supertype_ for all objects in JavaScript. Therefore, any object can use the `hasOwnProperty` method.
   - `Object.create(obj)` creates a new object, and sets `obj` as the new object's prototype.
-  - Inheritance refers to adding the parent properties and methods to the child.
+  - Inheritance refers to adding the parent properties and methods to the child, you can use the keyword `extends` to extend a class.
+  - `super`refers to the parent class constructor.
   - For unrelated objects, it's better to use _mixins_. A _mixin_ allows other objects to use a collection of functions.
   - The simplest way to make this public property private is by creating a variable within the constructor function. This changes the scope of that variable to be within the constructor function versus available globally. This way, the variable can only be accessed and changed by methods also within the constructor function.
   - In JavaScript, a function always has access to the context in which it was created. This is called `closure`.
@@ -535,3 +536,13 @@ myPromise.then((result) => {});
 - To throw an error you can use `throw new Error()`.
 - You can chain multiple requests using _promises_.
 - _Axios_ = A library for making HTTP request (more easy than fetch API).
+
+## Async Functions
+
+- Syntactic sugar for promises, but works the same as promises.
+- Async functions always return promises.
+- `async` for declaring a function asyncronous.
+- `await` for waiting the response.
+- You can _catch_ errors in an async function by using `try` and `catch`.
+- You can chain multiple `await` for multiple requests.
+- You can use `Promise.all([])` to wait for all the promises to resolve.
